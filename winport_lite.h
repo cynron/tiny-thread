@@ -114,6 +114,10 @@ int pthread_cond_destroy(pthread_cond_t* cond);
 #pragma comment(lib, "ws2_32.lib")
 #endif /* _MSC_VER */
 
+#if defined(_MSC_VER)
+# define strdup _strdup
+#endif
+
 int pipe(int fds[2]);
 
 #if !defined(F_GETFL)
