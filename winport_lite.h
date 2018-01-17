@@ -61,7 +61,6 @@ int pthread_create(pthread_t *thread, const pthread_attr_t* attr,
 		void *(*start_routine)(void*), void* args); /* if successful, return 0; otherwise, not 0 */
 pthread_t pthread_self();
 int pthread_join(pthread_t thread, void **ret);
-#define pthread_cancel(th) TerminateThread(th, 0)
 
 /*
  * clock_gettime
